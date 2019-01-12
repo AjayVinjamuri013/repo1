@@ -2,7 +2,7 @@ const express = require('express');
 const hbs = require('hbs');
 const fs = require('fs');
 
-
+const port = process.env.PORT || 3009;
 var app = express();
 
 app.set('view engine',hbs);
@@ -45,5 +45,7 @@ app.get('/about',(req,res)=>{
 		title : 'aboutpage'
 	});
 });
-app.listen(3009);
+app.listen(port,()=>{
+	console.log(`running on port ${port}`);
+});
 
