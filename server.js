@@ -40,6 +40,12 @@ app.get('/',(req,res)=>{
 		title : 'homepage'	});
 });
 
+app.get('/projects',(req,res)=>{
+	res.render('pro.hbs',{
+		title : 'projects'
+	});
+});
+
 app.get('/about',(req,res)=>{
 	res.render('about.hbs',{
 		title : 'aboutpage'
